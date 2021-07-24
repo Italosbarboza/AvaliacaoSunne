@@ -4,15 +4,16 @@ import { container } from "tsyringe";
 
 import express, { Request, Response, NextFunction } from "express";
 import { errors } from "celebrate";
+
 import "express-async-errors";
 import cors from "cors";
 
+import "@shared/container";
+
+import routes from "./routes";
+import AppError from "@shared/errors/AppError";
 import ConexaoMongo from "../connections/mongodb/index";
 
-import AppError from "@shared/errors/AppError";
-import routes from "./routes";
-
-import "@shared/container";
 
 const app = express();
 

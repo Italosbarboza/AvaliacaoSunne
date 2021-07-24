@@ -8,8 +8,8 @@ import sessionsProfessoresRouter from "@modules/professores/infra/http/routes/se
 
 const routes = Router();
 
-routes.use("/api/professores", professoresRouter);
 routes.use("/api/alunos", alunosRouter);
+routes.use("/api/professores", professoresRouter);
 routes.use("/api/sessions/alunos", sessionsAlunosRouter);
 routes.use("/api/sessions/professores", sessionsProfessoresRouter);
 
